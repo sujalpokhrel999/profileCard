@@ -1,75 +1,137 @@
-#root{
+/* General styles remain the same */
+
+#root {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
-.wrapper{
+.wrapper {
   display: flex;
   flex-direction: column;
-  color:#ccc;
-  margin: 20px 50px;
+  color: #ccc;
+  margin: 20px;
   border: 1px solid black;
-  padding: 5px;
+  padding: 10px;
   box-shadow: 5px 5px 15px #000;
   border-radius: 8px;
+  width: 100%; /* Adjust width for smaller screens */
+  max-width: 400px; /* Limit max width for responsiveness */
 }
 
-.imageContainer{
+.imageContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 100%; /* Full width for smaller screens */
 }
 
-Footer{
+footer {
   background-color: #202528;
-  width: 50%;
+  width: 100%; /* Adjust footer width for smaller screens */
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  border-radius: 8px ;
 }
 
-.CardTitle{
-  font-size: 28px;
+.CardTitle {
+  font-size: 24px; /* Reduce font size for smaller screens */
   margin-left: 8px;
   margin-bottom: 10px;
+  text-align: center; /* Center-align text for mobile */
 }
 
-.CardText{
+.CardText {
   margin-left: 10px;
   font-size: 14px;
-  margin-top: 25px;
-}
-.container{
-  display: flex;
-  height: 500px;
-  width: 800px;
+  margin-top: 20px;
+  text-align: center; /* Center-align text for better readability */
 }
 
-.icons{
+.container {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column; /* Stack elements vertically for mobile */
+  height: auto; /* Adjust height for responsiveness */
+  width: 100%;
+  max-width: 400px; /* Limit width for smaller screens */
+}
+
+.icons {
+  display: flex;
+  justify-content: space-around; /* Adjust spacing for smaller screens */
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
-.icons a{
+.icons a {
   background-color: rgb(240, 240, 240);
-  padding: 12px;
+  padding: 10px; /* Adjust padding for smaller screens */
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  transition: all 0.3s ease-in-out; /* Smooth hover effect */
 }
 
-.profileImg{
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
+.icons a:hover {
+  background-color: #333; /* Darken background on hover */
+  color: #ccc;
 }
 
-.facebook{
- fill: "blue";
+.profileImg {
+  width: 200px; /* Reduce size for mobile screens */
+  height: 200px;
+  border-radius: 10px;
+  margin-bottom: 20px; /* Add spacing for better layout */
+}
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 768px) {
+  .wrapper {
+    margin: 10px;
+    padding: 8px;
+  }
+
+  .CardTitle {
+    font-size: 20px; /* Smaller title size */
+  }
+
+  .CardText {
+    font-size: 12px; /* Adjust text size for mobile */
+  }
+
+  .icons a {
+    padding: 8px; /* Smaller padding for icons */
+  }
+
+  .profileImg {
+    width: 150px;
+    height: 150px; /* Further reduce image size */
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .CardTitle {
+    font-size: 18px;
+  }
+
+  .CardText {
+    font-size: 10px;
+  }
+
+  .profileImg {
+    width: 120px;
+    height: 120px;
+  }
+
+  .icons a {
+    padding: 6px;
+  }
 }
